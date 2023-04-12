@@ -44,21 +44,14 @@ export class HistoricComponent {
     this.user = this.service.GetbyCode(localStorage.getItem('username')).subscribe(res => {
       this.user = res;
       this.historico = this.user.historico;
-    // compara os ids nos historicos com todas as musicas no banco dados
+    // compara os ids nos historicos com todas as musicas no banco
     for (let index = 0; index < this.musicas.length; index++) { 
       for (let indexhistorico = 0; indexhistorico < this.historico.length; indexhistorico++) {
         if (this.historico[indexhistorico] == this.musicas[index].id) {
-            this.musicasHistorico = [...this.musicasHistorico, this.musicas[index]]
-          
-        }
-        
-      }
-      
-      
+            this.musicasHistorico = [...this.musicasHistorico, this.musicas[index]] 
+        } 
+      }   
     }
-
-
-
     });
   }
 }
