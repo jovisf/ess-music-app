@@ -18,14 +18,14 @@ async function loginAsUser(user_id: string, password: string){
     await $("input[formControlName='username']").sendKeys(<string> user_id);
     await $("input[formControlName='password']").sendKeys(<string> password);
     await element(by.buttonText('Login')).click();
-    await browser.wait(ExpectedConditions.urlIs(base_front_url + "/initial-page") , 30000);
-    await expect(browser.getCurrentUrl()).to.eventually.equal(base_front_url + "/initial-page");
 }
 
 defineSupportCode(function ({ Given, When, Then }){
 
     Given(/^Estou logado como o usuário Administrador de email "([^\"]*)" e senha "([^\"]*)"$/, {timeout: 30000}, async (email: string, password: string) => {
         await loginAsUser(email, password);
+        await browser.wait(ExpectedConditions.urlIs(base_front_url + "/userAdmin") , 30000);
+        await expect(browser.getCurrentUrl()).to.eventually.equal(base_front_url + "/userAdmin");
     })
 
     When(/^Clico em "Adicionar"$/, async() => {

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../service/auth.service';
-import { MatDialog } from '@angular/material/dialog';
 import { MusicaService } from '../musicas/musicas.service';
 
 @Component({
@@ -15,6 +14,7 @@ user: any;
 musicaTitulo: string = '';
 musicaId: number = 6;
 artistaTitulo: string = '';
+repetidor: number = 6;
 
 constructor(
 private http: HttpClient,
@@ -46,10 +46,10 @@ pausar(): void {
 }
 
 avancar(): void {
-this.musicaId += 1;
-this.musicaService.getMusicaById(String(this.musicaId)).subscribe(res => {
-this.musicaTitulo = res.titulo;
-this.artistaTitulo = res.artistaNome;
-});
-}
+    this.musicaId += 1;
+    this.musicaService.getMusicaById(String(this.musicaId)).subscribe(res => {
+    this.musicaTitulo = res.titulo;
+    this.artistaTitulo = res.artistaNome;
+    });
+    }
 }

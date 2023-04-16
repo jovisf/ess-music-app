@@ -6,12 +6,19 @@ Feature: Registration and maintenance of Users (insert, remove, update)
     So that users could login at the "Dizer"
     And users could update theirs information at the "Dizer"
 
-Scenario: Logged in user wants to delete his account
-    Given I am logged in with user "pcsb" and password "pcsb01"
-    And I am on the "Editar Perfil" page
-    When I click on "Deletar Perfil"
-    And I click "Sim"
-    Then I am logged out on the "Pagina Inicial" page
+Scenario: Administrator wants to edit a User from the system
+    Given I am logged in with an admin account with user "admin@dizer.com" and password "admin"
+    And I am on the "Lista de Usuários" page
+    And I see a list of system users
+    And I see the collumns "Usuario", "Nome", "Email", "Tipo de Usuário" and "Status" with the values "pcsb", "Pedro Basilio", "pcsb@cin.ufpe.br", "user" and "Ativo"
+    When I click on the "Editar" button on the "Usuario" user "pcsb" line
+    And I write "Pedro Costa" in "Nome" field, "pcsb02" in "Senha" field, "pcsb2@cin.ufpe.br" in "Email" field
+    And I click "Atualizar"
+    Then I see a success message "Informação alterada com sucesso!"
+    And I see a list of system users
+    And I see the collumns fields "Usuario", "Nome", "Email", "Tipo de Usuário" and "Status" with the values "pcsb", "Pedro Costa", "pcsb2@cin.ufpe.br", "user" and "Ativo"
+
+
 
 Scenario: User logged in wants to change his password
     Given I am logged in with user "pcsb" and password "pcsb01"
@@ -39,16 +46,14 @@ Scenario: User logged in wants to change his password without password
     Then I get a Registration Error message "Por favor colocar um dado válido"
     And I see the "Nova Senha" field highlighted
 
-
-
 Scenario: Administrator wants to remove a User from the system
     Given I am logged in with an admin account with user "admin@dizer.com" and password "admin"
-    And I'm on the "Lista de Usuários" page
+    And I am on the "Lista de Usuários" page
     And I see a list of system users
     And I see the "email" user "pcsb@cin.ufpe.br"
     When I click on the "Remover" button on the "Email" user "pcsb@cin.ufpe.br" line
     And I click "Sim"
-    Then I check that the "Email" user "pcsb@cin.ufpe.br" is no longer on the list of system users
+    Then I check that the email user "pcsb@cin.ufpe.br" is no longer on the list of system users
 
 Scenario: Administrator wants to edit a User password to a password less than 6 digits
     Given I am logged in with an admin account with user "admin@dizer.com" and password "admin"
