@@ -1,59 +1,55 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../service/auth.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MusicaService } from '../musicas/musicas.service';
-import { CadastraArtistaService } from '../cadastra-artista/cadastra-artista.service';
 
 @Component({
-  selector: 'app-tocador',
-  templateUrl: './tocador.component.html',
-  styleUrls: ['./tocador.component.css']
+selector: 'app-tocador',
+templateUrl: './tocador.component.html',
+styleUrls: ['./tocador.component.css']
 })
+export class TocadorComponent implements OnInit {
 
+user: any;
+musicaTitulo: string = '';
+musicaId: number = 6;
+artistaTitulo: string = '';
 
-export class TocadorComponent {
+constructor(
+private http: HttpClient,
+private authService: AuthService,
+private musicaService: MusicaService
+) {}
 
-  user:any;
-  musicaTitulo: string = '';
-  musicaId: number = 6;
-  artistaTitulo: string = '';
-  constructor(private http:HttpClient, private service: AuthService, private dialog: MatDialog, private musicaService: MusicaService) {
+ngOnInit(): void {
+this.authService.GetbyCode(localStorage.getItem('username')).subscribe(res => {
+this.user = res;
+});
 
+this.musicaService.getMusicaById(String(this.musicaId)).subscribe(res => {
+  this.musicaTitulo = res.titulo;
+  this.artistaTitulo = res.artistaNome;
+});
+}
 
-    this.user = this.service.GetbyCode(localStorage.getItem('username')).subscribe(res => {
-      this.user = res;
-    });
+tocar(): void {
+const historicoAtualizado = this.user.historico || [];
+historicoAtualizado.unshift(this.musicaId);
+this.http.patch(`http://localhost:3000/user/${this.user.id}/`, {"historico" : historicoAtualizado}).subscribe();
+console.log({message:'Música ouvida'});
+this.avancar()
+}
 
-    this.musicaService.getMusicaById(String(this.musicaId)).subscribe(res => {
-      this.musicaTitulo = res.titulo;
-    })
-    this.musicaService.getMusicaById(String(this.musicaId)).subscribe(res => {
-      this.artistaTitulo = res.artistaNome;
-    })
+pausar(): void {
+// Código para pausar música
+}
 
-  }
-
-  tocar() {
-      const historicoAtualizado = this.user.historico || []; // Verifica se já existe um histórico. Caso não exista, usa um array vazio
-      historicoAtualizado.unshift(this.musicaId)
-      //const historicoAtualizado = [ this.musicaId, ...historicoAntigo]; // Adiciona o novo ID da música ao histórico antigo
-      this.http.patch(`http://localhost:3000/user/${this.user.id}/`, {"historico" : historicoAtualizado}).subscribe();
-      console.log({string:'Música ouvida'});
-      this.avancar();
-      }
-
-  pausar() {
-    // Código para pausar música
-  }
-
-  avancar(){
-    this.musicaId += 1;
-    this.musicaService.getMusicaById(String(this.musicaId)).subscribe(res => {
-      this.musicaTitulo = res.titulo;
-    })
-    this.musicaService.getMusicaById(String(this.musicaId)).subscribe(res => {
-      this.artistaTitulo = res.artistaNome;
-    })
-  };
+avancar(): void {
+this.musicaId += 1;
+this.musicaService.getMusicaById(String(this.musicaId)).subscribe(res => {
+this.musicaTitulo = res.titulo;
+this.artistaTitulo = res.artistaNome;
+});
+}
 }

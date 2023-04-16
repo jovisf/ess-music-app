@@ -23,6 +23,7 @@ footer {
     font-weight: bold;
     cursor: pointer;
     grid-row-start: 2;
+    text-align: center;
   }
 
     .btnplayer{
