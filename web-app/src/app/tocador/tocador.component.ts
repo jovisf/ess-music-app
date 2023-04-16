@@ -14,7 +14,6 @@ user: any;
 musicaTitulo: string = '';
 musicaId: number = 6;
 artistaTitulo: string = '';
-repetidor: number = 6;
 
 constructor(
 private http: HttpClient,
