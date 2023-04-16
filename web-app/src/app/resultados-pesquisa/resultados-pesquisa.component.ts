@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Artista } from '../artista/artista';
 import { Album } from '../album/album';
 import { Musica } from '../musicas/musica';
@@ -14,7 +14,7 @@ export class ResultadosPesquisaComponent {
   artistas: Artista[] = []
   albuns: Album[] = []
   musicas: Musica[] = []
-  constructor(private route: ActivatedRoute, private resultadosService: ResultadoPesquisaService){}
+  constructor(private route: ActivatedRoute, private resultadosService: ResultadoPesquisaService, private router: Router) {}
 
   ngOnInit(){
     this.artistas = this.resultadosService.artistas
@@ -22,5 +22,17 @@ export class ResultadosPesquisaComponent {
     this.musicas = this.resultadosService.musicas
 
     console.log(this.artistas, this.albuns, this.musicas)
+  }
+
+  cadastraMusicaPlaylist(musicaId: number) {
+    this.router.navigate(['adiciona-musica-playlist', musicaId]);
+  }
+
+  irParaAlbum(albumId: Number) {
+    this.router.navigate(['albumAdmin', String(albumId)]);
+  }
+
+  irParaArtista(artistaId: Number) {
+    this.router.navigate(['artista', String(artistaId)]);
   }
 }

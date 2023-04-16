@@ -44,7 +44,7 @@ export class SelecionarPlaylistComponent {
           albumId: this.musica.albumId,
           artistaId: this.musica.artistaId,
           artistaNome: this.musica.artistaNome,
-          tituloAlbum: this.musica.tituloAlbum
+          tituloAlbum: this.musica.tituloAlbum,
         }
   
         // cria uma nova instância da playlist com a nova música adicionada
@@ -55,7 +55,8 @@ export class SelecionarPlaylistComponent {
           url_foto_playlist: playlist.url_foto_playlist,
           categoria: playlist.categoria,
           usuario_dono: playlist.usuario_dono,
-          musicas: [...playlist.musicas, musica]
+          musicas: [...playlist.musicas, musica],
+          seguidores: playlist.seguidores
         }
   
         this.http.put(this.taURL + "/playlists/" + String(playlistId), novaPlaylist).subscribe(() => {
@@ -70,6 +71,7 @@ export class SelecionarPlaylistComponent {
 
   toggleAdicionar(playlistId: number) {
     this.cadastraMusicaPlaylist(playlistId)
+    window.location.reload()
     this.adicionar = !this.adicionar;
   }
 }

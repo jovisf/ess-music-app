@@ -4,7 +4,7 @@ import { Musica } from '../musicas/musica';
 import { MusicaService } from '../musicas/musicas.service';
 import { Album } from '../album/album';
 import { CadastraAlbumService } from '../cadastra-album/cadastra-album.service';
-import { switchMap } from 'rxjs';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-album-admin',
@@ -12,10 +12,12 @@ import { switchMap } from 'rxjs';
   styleUrls: ['./album-admin.component.css']
 })
 export class AlbumAdminComponent {
-  constructor(private route: ActivatedRoute, private musicaService: MusicaService, private albumService: CadastraAlbumService, private router: Router) {}
+  constructor(private route: ActivatedRoute, private musicaService: MusicaService, private albumService: CadastraAlbumService, private router: Router, private service: AuthService) {}
   albumId: string = '';
   album: Album = new Album;
   musicas: Musica[] = [];
+  isadminuser = false;
+
 
   ngOnInit() {
     this.albumId = this.route.snapshot.params['id'];
@@ -27,6 +29,12 @@ export class AlbumAdminComponent {
     this.musicaService.getMusicasByAlbum(this.albumId).subscribe(musicas => {
       this.musicas = musicas;
     });
+
+    if (this.service.GetUserRole() === 'admin') {
+      this.isadminuser = true;
+    } else {
+      this.isadminuser = false;
+    }
   }
 
   cadastrarMusicas() {

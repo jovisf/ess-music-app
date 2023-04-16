@@ -14,7 +14,7 @@
     {
       "id": "pcsb",
       "name": "Pedro Basilio",
-      "password": "$2a$10$OEqwLgban/PoSr2PLe5bPeVCsdHouxFo6ttpsch7V3lFobSoLZLsG",
+      "password": "$2a$10$JbqntgKTYwz.WRgzrOsCueYcokImwy1SQ2XusSBW1BnXoutZIWnHe",
       "email": "pcsb@cin.ufpe.br",
       "role": "user",
       "isactive": true,
@@ -23,7 +23,7 @@
     {
       "id": "pcsb1",
       "name": "Pedro Basilio",
-      "password": "$2a$10$LjnzGLAzfzVh4QasM8psHOQGGvET.7bkaDb/O3P7FD1Yb8SNNIeiS",
+      "password": "$2a$10$.uTArMgtOYd8tfrOEnILVeT6l7LdUYTDzjdfBuFdZ7PJO3nGsiqtK",
       "email": "pcsb1@cin.ufpe.br",
       "role": "user",
       "isactive": true,
@@ -37,22 +37,22 @@
       "role": "user",
       "isactive": true,
       "historico": [
-        74,
-        73,
-        72,
+        110,
+        109,
+        105,
+        104,
         71,
         70,
         69,
         68,
         67,
-        66,
-        65,
-        64,
-        63,
-        62,
-        61,
-        60,
-        59
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6
       ]
     },
     {
@@ -72,6 +72,38 @@
       "role": "user",
       "isactive": true,
       "historico": []
+    },
+    {
+      "id": "pcsb3",
+      "name": "pcsb",
+      "password": "$2a$10$0LfwlL5S4sMr7vTG/jwkCOSVNLsZeY/PD14rRB40acF8dxUQKUXre",
+      "email": "pcsb@aspokpok",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "pcsb2",
+      "name": "Pedro",
+      "password": "$2a$10$Q.5/gqHD/rN1gR4Trs0qjec5K7tctSHettD80DWA4ncf97qN0bGWK",
+      "email": "pcsb@cpasodkfpoaskf",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "floquinho",
+      "name": "floquinho",
+      "password": "$2a$10$S32KHiJTwedUCrPJQv9a5.MoyOrW0lGCoD.eG9X143Ziy/Z1IPTny",
+      "email": "floquinho@floquinho.com",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "eliabinho",
+      "name": "eliabinho",
+      "password": "$2a$10$4VgwfNsYXZF1eSAd7g8X/OYWcbrOjlzKdBJnbd0GxYqyOlEjxM2ru",
+      "email": "eliabinho@eliabinho.com",
+      "role": "admin",
+      "isactive": true
     }
   ],
   "role": [
@@ -131,10 +163,10 @@
       "id": 3
     },
     {
+      "id": 4,
       "nome": "Doja cat",
-      "categoria": "Hip-Hop/rap",
-      "url_foto_artista": "https://www.deezer-blog.com/assets/sites/8/2021/12/doja-cat.jpg",
-      "id": 4
+      "categoria": "hip hop",
+      "url_foto_artista": "https://www.deezer-blog.com/assets/sites/8/2021/12/doja-cat.jpg"
     },
     {
       "id": 5,
@@ -153,12 +185,6 @@
       "nome": "Ariana Grande",
       "categoria": "Pop",
       "url_foto_artista": "https://lastfm.freetls.fastly.net/i/u/avatar170s/6b02b78c1a6f34a27a0a6f39a1739f6b"
-    },
-    {
-      "nome": "Ivete Saganlo",
-      "categoria": "MPB",
-      "url_foto_artista": "https://lastfm.freetls.fastly.net/i/u/770x0/ef0e63b189e0155bf24f4268cf3bf6de.jpg#ef0e63b189e0155bf24f4268cf3bf6de",
-      "id": 11
     },
     {
       "nome": "The Strokes",
@@ -408,42 +434,6 @@
     }
   ],
   "musicas": [
-    {
-      "titulo": " Woman",
-      "albumId": 1,
-      "artistaId": 4,
-      "capaAlbum": "https://upload.wikimedia.org/wikipedia/en/6/61/Doja_Cat_-_Planet_Her.png",
-      "artistaNome": "Doja cat",
-      "tituloAlbum": "Planet Her",
-      "id": 1
-    },
-    {
-      "titulo": "Naked",
-      "albumId": 1,
-      "artistaId": 4,
-      "capaAlbum": "https://upload.wikimedia.org/wikipedia/en/6/61/Doja_Cat_-_Planet_Her.png",
-      "artistaNome": "Doja cat",
-      "tituloAlbum": "Planet Her",
-      "id": 2
-    },
-    {
-      "titulo": "Payday (Feat. Young Thug)",
-      "albumId": 1,
-      "artistaId": 4,
-      "capaAlbum": "https://upload.wikimedia.org/wikipedia/en/6/61/Doja_Cat_-_Planet_Her.png",
-      "artistaNome": "Doja cat",
-      "tituloAlbum": "Planet Her",
-      "id": 3
-    },
-    {
-      "titulo": "Get Into It (Yuh)",
-      "albumId": 1,
-      "artistaId": 4,
-      "capaAlbum": "https://upload.wikimedia.org/wikipedia/en/6/61/Doja_Cat_-_Planet_Her.png",
-      "artistaNome": "Doja cat",
-      "tituloAlbum": "Planet Her (Deluxe)",
-      "id": 4
-    },
     {
       "id": 6,
       "titulo": "willow",
@@ -1093,105 +1083,6 @@
       "artistaNome": "Taylor Swift"
     },
     {
-      "id": 78,
-      "titulo": "Cyber Sex",
-      "albumId": 2,
-      "artistaId": 4,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/b0f247dc7b26fd7c91ba720401f200dd.jpg",
-      "tituloAlbum": "Hot Pink",
-      "artistaNome": "Doja Cat"
-    },
-    {
-      "id": 79,
-      "titulo": "Won't Bite (feat. Smino)",
-      "albumId": 2,
-      "artistaId": 4,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/b0f247dc7b26fd7c91ba720401f200dd.jpg",
-      "tituloAlbum": "Hot Pink",
-      "artistaNome": "Doja Cat"
-    },
-    {
-      "id": 80,
-      "titulo": "Rules",
-      "albumId": 2,
-      "artistaId": 4,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/b0f247dc7b26fd7c91ba720401f200dd.jpg",
-      "tituloAlbum": "Hot Pink",
-      "artistaNome": "Doja Cat"
-    },
-    {
-      "id": 81,
-      "titulo": "Bottom Bitch",
-      "albumId": 2,
-      "artistaId": 4,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/b0f247dc7b26fd7c91ba720401f200dd.jpg",
-      "tituloAlbum": "Hot Pink",
-      "artistaNome": "Doja Cat"
-    },
-    {
-      "id": 82,
-      "titulo": "Say So",
-      "albumId": 2,
-      "artistaId": 4,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/b0f247dc7b26fd7c91ba720401f200dd.jpg",
-      "tituloAlbum": "Hot Pink",
-      "artistaNome": "Doja Cat"
-    },
-    {
-      "id": 83,
-      "titulo": "Like That (feat. Gucci Mane)",
-      "albumId": 2,
-      "artistaId": 4,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/b0f247dc7b26fd7c91ba720401f200dd.jpg",
-      "tituloAlbum": "Hot Pink",
-      "artistaNome": "Doja Cat"
-    },
-    {
-      "id": 84,
-      "titulo": "Talk Dirty",
-      "albumId": 2,
-      "artistaId": 4,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/b0f247dc7b26fd7c91ba720401f200dd.jpg",
-      "tituloAlbum": "Hot Pink",
-      "artistaNome": "Doja Cat"
-    },
-    {
-      "id": 85,
-      "titulo": "Addiction",
-      "albumId": 2,
-      "artistaId": 4,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/b0f247dc7b26fd7c91ba720401f200dd.jpg",
-      "tituloAlbum": "Hot Pink",
-      "artistaNome": "Doja Cat"
-    },
-    {
-      "id": 86,
-      "titulo": "Streets",
-      "albumId": 2,
-      "artistaId": 4,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/b0f247dc7b26fd7c91ba720401f200dd.jpg",
-      "tituloAlbum": "Hot Pink",
-      "artistaNome": "Doja Cat"
-    },
-    {
-      "id": 87,
-      "titulo": "Shine",
-      "albumId": 2,
-      "artistaId": 4,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/b0f247dc7b26fd7c91ba720401f200dd.jpg",
-      "tituloAlbum": "Hot Pink",
-      "artistaNome": "Doja Cat"
-    },
-    {
-      "id": 88,
-      "titulo": "Better Than Me",
-      "albumId": 2,
-      "artistaId": 4,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/b0f247dc7b26fd7c91ba720401f200dd.jpg",
-      "tituloAlbum": "Hot Pink",
-      "artistaNome": "Doja Cat"
-    },
-    {
       "id": 89,
       "titulo": "Juicy (feat. Tyga)",
       "albumId": 2,
@@ -1468,15 +1359,6 @@
       "artistaId": 2,
       "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/770x0/d4a339a2bd2bc5fe470e0b0c10444903.jpg#d4a339a2bd2bc5fe470e0b0c10444903",
       "tituloAlbum": "ANTi (Deluxe)",
-      "artistaNome": "Rihanna"
-    },
-    {
-      "id": 120,
-      "titulo": "Phresh Out the Runway",
-      "albumId": 4,
-      "artistaId": 2,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/2d95b09c19504252f1a5b670ef1b2076.jpg",
-      "tituloAlbum": "Unapologetic (Deluxe)",
       "artistaNome": "Rihanna"
     },
     {
@@ -1847,159 +1729,6 @@
       "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/a7cd5b2046514a52ba359e06743693f9.jpg",
       "tituloAlbum": "Loud",
       "artistaNome": "Rihanna"
-    },
-    {
-      "id": 179,
-      "titulo": "The Car",
-      "albumId": 11,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/69c2e238f63d5aa2d62181d5b74f34a0.jpg",
-      "tituloAlbum": "The Car",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 180,
-      "titulo": "Big Ideas",
-      "albumId": 11,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/69c2e238f63d5aa2d62181d5b74f34a0.jpg",
-      "tituloAlbum": "The Car",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 181,
-      "titulo": "Hello You",
-      "albumId": 11,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/69c2e238f63d5aa2d62181d5b74f34a0.jpg",
-      "tituloAlbum": "The Car",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 182,
-      "titulo": "Mr Schwartz",
-      "albumId": 11,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/69c2e238f63d5aa2d62181d5b74f34a0.jpg",
-      "tituloAlbum": "The Car",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 183,
-      "titulo": "Perfect Sense",
-      "albumId": 11,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/69c2e238f63d5aa2d62181d5b74f34a0.jpg",
-      "tituloAlbum": "The Car",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 184,
-      "titulo": "Star Treatment",
-      "albumId": 12,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/c7f6da092ec3fd3bdb02e3ff71c56fea.jpg",
-      "tituloAlbum": "Tranquility Base Hotel & Casino",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 185,
-      "titulo": "One Point Perspective",
-      "albumId": 12,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/c7f6da092ec3fd3bdb02e3ff71c56fea.jpg",
-      "tituloAlbum": "Tranquility Base Hotel & Casino",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 186,
-      "titulo": " American Sports",
-      "albumId": 12,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/c7f6da092ec3fd3bdb02e3ff71c56fea.jpg",
-      "tituloAlbum": "Tranquility Base Hotel & Casino",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 187,
-      "titulo": "Tranquility Base Hotel & Casino",
-      "albumId": 12,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/c7f6da092ec3fd3bdb02e3ff71c56fea.jpg",
-      "tituloAlbum": "Tranquility Base Hotel & Casino",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 188,
-      "titulo": "Golden Trunks",
-      "albumId": 12,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/c7f6da092ec3fd3bdb02e3ff71c56fea.jpg",
-      "tituloAlbum": "Tranquility Base Hotel & Casino",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 189,
-      "titulo": "Four Out of Five",
-      "albumId": 12,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/c7f6da092ec3fd3bdb02e3ff71c56fea.jpg",
-      "tituloAlbum": "Tranquility Base Hotel & Casino",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 190,
-      "titulo": "The World's First Ever Monster Truck Front Flip",
-      "albumId": 12,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/c7f6da092ec3fd3bdb02e3ff71c56fea.jpg",
-      "tituloAlbum": "Tranquility Base Hotel & Casino",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 191,
-      "titulo": "Science Fiction",
-      "albumId": 12,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/c7f6da092ec3fd3bdb02e3ff71c56fea.jpg",
-      "tituloAlbum": "Tranquility Base Hotel & Casino",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 192,
-      "titulo": "Batphone",
-      "albumId": 12,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/c7f6da092ec3fd3bdb02e3ff71c56fea.jpg",
-      "tituloAlbum": "Tranquility Base Hotel & Casino",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 193,
-      "titulo": "The Ultracheese",
-      "albumId": 12,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/c7f6da092ec3fd3bdb02e3ff71c56fea.jpg",
-      "tituloAlbum": "Tranquility Base Hotel & Casino",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 194,
-      "titulo": "She's Thunderstorms",
-      "albumId": 14,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/e8faaf58a491491ea00e6d3b7ac5d7db.jpg",
-      "tituloAlbum": "Suck It and See",
-      "artistaNome": "Arctic Monkeys"
-    },
-    {
-      "id": 195,
-      "titulo": "Black Treacle",
-      "albumId": 14,
-      "artistaId": 5,
-      "capaAlbum": "https://lastfm.freetls.fastly.net/i/u/500x500/e8faaf58a491491ea00e6d3b7ac5d7db.jpg",
-      "tituloAlbum": "Suck It and See",
-      "artistaNome": "Arctic Monkeys"
     },
     {
       "id": 196,
@@ -3768,10 +3497,65 @@
   ],
   "playlists": [
     {
-      "titulo": "Treino",
+      "id": 1,
+      "titulo": "Rihanna não faz mais show",
       "privacidade": "Pública",
-      "url_foto_playlist": "https://cdn.shopify.com/s/files/1/0570/3483/4103/articles/Beneficios_de_treinar_em_jejum_600x600_crop_center.jpg?v=1673311268",
-      "id": 1
+      "categoria": "Pop music",
+      "url_foto_playlist": "https://veja.abril.com.br/wp-content/uploads/2023/02/GettyImages-1465427889.jpg?quality=70&strip=info&w=1280&h=720&crop=1",
+      "musicas": [],
+      "seguidores": [
+        {
+          "id": "floquinho",
+          "name": "floquinho",
+          "password": "$2a$10$S32KHiJTwedUCrPJQv9a5.MoyOrW0lGCoD.eG9X143Ziy/Z1IPTny",
+          "email": "floquinho@floquinho.com",
+          "role": "user",
+          "isactive": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "playlist",
+      "privacidade": "Pública",
+      "categoria": "Country",
+      "url_foto_playlist": "https://conteudo.imguol.com.br/c/splash/bb/2022/09/25/rihanna-fara-show-do-intervalo-no-super-bowl-1664136688125_v2_4x3.jpg",
+      "usuario_dono": {
+        "id": "floquinho",
+        "name": "floquinho",
+        "password": "$2a$10$S32KHiJTwedUCrPJQv9a5.MoyOrW0lGCoD.eG9X143Ziy/Z1IPTny",
+        "email": "floquinho@floquinho.com",
+        "role": "user",
+        "isactive": true
+      },
+      "musicas": [],
+      "seguidores": [
+        {
+          "id": "eliabinho",
+          "name": "eliabinho",
+          "password": "$2a$10$4VgwfNsYXZF1eSAd7g8X/OYWcbrOjlzKdBJnbd0GxYqyOlEjxM2ru",
+          "email": "eliabinho@eliabinho.com",
+          "role": "user",
+          "isactive": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Lana diva feminista",
+      "privacidade": "Pública",
+      "categoria": "Rock",
+      "url_foto_playlist": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Lana_Del_Rey_%40_Grammy_Museum_10_13_2019_%2849311023203%29.jpg",
+      "usuario_dono": {
+        "id": "eliabinho",
+        "name": "eliabinho",
+        "password": "$2a$10$4VgwfNsYXZF1eSAd7g8X/OYWcbrOjlzKdBJnbd0GxYqyOlEjxM2ru",
+        "email": "eliabinho@eliabinho.com",
+        "role": "user",
+        "isactive": true
+      },
+      "musicas": [],
+      "seguidores": []
     }
   ],
   "categorias": [

@@ -6,17 +6,14 @@
 
       <p class="paragrafo" style="font-size: 30px; font-weight: bold; text-align: left;">Suas playlists</p>
       <table class="tabela-playlists" id="tabelaPlaylists">
-        <tr>
-          <td><img src="./../../assets/playlist1Capa.png"><br>Antigas da Rihanna<br><span class="privacidade">Pública</span></td>
-          <td><img src="./../../assets/playlist2Capa.png"><br>Favs<br><span class="privacidade">Privada</span></td>
-          <td><img src="./../../assets/playlist3Capa.jpg"><br>Favs da taylor<br><span class="privacidade">Privada</span></td>
-          <td><img src="./../../assets/playlist4Capa.png"><br>Hits<br><span class="privacidade">Pública</span></td>
+        <tr *ngFor="let playlist of playlists">
+          <td (click)="redirecionaTelaPlaylist(playlist.id)"><img src="{{playlist.url_foto_playlist}}"><br>{{playlist.titulo}}<br><span class="privacidade">{{playlist.privacidade}}</span></td>
         </tr>
       </table>
       <p class="paragrafo" style="font-size: 30px; font-weight: bold;">Playlists seguidas por você</p>
       <table class="tabela-playlists" id="tabelaPlaylists">
         <tr>
-          <td><img src="./../../assets/playlistTreinoCategoria.jpg"><br>Músicas para treinar<br><span class="categoria">Treino</span></td>
+          <td *ngFor="let playlist of playlistsSeguidas"><img src="{{playlist.url_foto_playlist}}"><br>{{playlist.titulo}}<br><span class="categoria">{{playlist.categoria}}</span></td>
         </tr>
       </table>
     </div>

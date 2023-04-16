@@ -1,128 +1,130 @@
 <div class="user-container">
-    <div class = "header">
-      <div class="circle">
-        <img src="./../../assets/usuarioSemFoto.png" alt="Minha imagem">
-      </div>
-      <div class="container">
-        <p style="font-size: 30px;">{{user.name}}</p>
-      </div>
-      </div>
-      <ul>
-        <li><a routerLink="/userEdit" ><button>Editar Perfil</button></a></li>
-        <li><a routerLink="/cadastraPlaylist" ><button>Criar playlist</button></a></li>
-      </ul>
+  <div class = "header">
+  <div class="circle">
+    <img src="./../../assets/usuarioSemFoto.png" alt="Minha imagem">
+  </div>
+  <div class="container">
+    <p style="font-size: 30px;">{{user.name}}</p>
+  </div>
+  </div>
+  <ul>
+    <li><a routerLink="/userEdit" ><button>Editar Perfil</button></a></li>
+    <li><a routerLink="" ><button>Criar playlist</button></a></li>
+  </ul>
+  
+    
+  
+  <p class="paragrafo" style="font-size: 20px;">Últimos 7 dias</p>
 
-      <p class="paragrafo" style="font-size: 30px; font-weight: bold;">Últimas músicas reproduzidas</p>
-      <div class="tableGeral">
-        
-        <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th># Título</th>
-              <th># Artista</th>
-              <th># Álbum</th>
-            </tr>
-          </thead>
-          <tbody>            
-            <tr class="cor-diferente">
-              <td class="album-capa">
-                <img src="./../../assets/evermore.jpg" alt="">
-              </td>
-              <td>right where you left me</td>
-              <td>Taylor Swift</td>
-              <td>evermore (deluxe)</td>
-              <td class="opcoes-header">
-                <div class="opcoes-wrapper">
-                  <div class="dropdown">
-                    <button class="dropbtn"><span class="material-icons">more_vert</span></button>
-                    <div class="dropdown-content">
-                      <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                      <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
-                    </div>
-                  </div>
+  <p class="paragrafo" style="font-size: 30px; font-weight: bold;">Últimas músicas reproduzidas</p>
+  <div class="tableGeral">
+    
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th># Título</th>
+          <th># Artista</th>
+          <th># Álbum</th>
+        </tr>
+      </thead>
+      <tbody>            
+        <tr class="cor-diferente">
+          <td class="album-capa">
+            <img src="./../../assets/evermore.jpg" alt="">
+          </td>
+          <td>right where you left me</td>
+          <td>Taylor Swift</td>
+          <td>evermore (deluxe)</td>
+          <td class="opcoes-header">
+            <div class="opcoes-wrapper">
+              <div class="dropdown">
+                <button class="dropbtn"><span class="material-icons">more_vert</span></button>
+                <div class="dropdown-content">
+                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
+                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
                 </div>
-            </tr>
-            <tr>
-              <td class="album-capa">
-                <img src="./../../assets/anti.jpg" alt="">
-              </td>
-              <td>Kiss It Better</td>
-              <td>Rihanna</td>
-              <td>ANTi (Deluxe)</td>
-              <td class="opcoes-header">
-                <div class="opcoes-wrapper">
-                  <div class="dropdown">
-                    <button class="dropbtn"><span class="material-icons">more_vert</span></button>
-                    <div class="dropdown-content">
-                      <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                      <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
-                    </div>
-                  </div>
+              </div>
+            </div>
+        </tr>
+        <tr>
+          <td class="album-capa">
+            <img src="./../../assets/anti.jpg" alt="">
+          </td>
+          <td>Kiss It Better</td>
+          <td>Rihanna</td>
+          <td>ANTi (Deluxe)</td>
+          <td class="opcoes-header">
+            <div class="opcoes-wrapper">
+              <div class="dropdown">
+                <button class="dropbtn"><span class="material-icons">more_vert</span></button>
+                <div class="dropdown-content">
+                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
+                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
                 </div>
-            </tr>
-            <tr class="cor-diferente">
-              <td class="album-capa">
-                <img src="./../../assets/calmDown.jpg" alt="">
-              </td>
-              <td>Calm Down</td>
-              <td>Rema e Selena Gomez</td>
-              <td>Calm Down</td>
-              <td class="opcoes-header">
-                <div class="opcoes-wrapper">
-                  <div class="dropdown">
-                    <button class="dropbtn"><span class="material-icons">more_vert</span></button>
-                    <div class="dropdown-content">
-                      <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                      <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
-                    </div>
-                  </div>
+              </div>
+            </div>
+        </tr>
+        <tr class="cor-diferente">
+          <td class="album-capa">
+            <img src="./../../assets/calmDown.jpg" alt="">
+          </td>
+          <td>Calm Down</td>
+          <td>Rema e Selena Gomez</td>
+          <td>Calm Down</td>
+          <td class="opcoes-header">
+            <div class="opcoes-wrapper">
+              <div class="dropdown">
+                <button class="dropbtn"><span class="material-icons">more_vert</span></button>
+                <div class="dropdown-content">
+                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
+                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
                 </div>
-            </tr>
-            <tr>
-              <td class="album-capa">
-                <img src="./../../assets/onAndOn.jpg" alt="">
-              </td>
-              <td>On & On (Feat. Daniel)</td>
-              <td>Cartoon</td>
-              <td>On & On</td>
-              <td class="opcoes-header">
-                <div class="opcoes-wrapper">
-                  <div class="dropdown">
-                    <button class="dropbtn"><span class="material-icons">more_vert</span></button>
-                    <div class="dropdown-content">
-                      <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                      <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
-                    </div>
-                  </div>
+              </div>
+            </div>
+        </tr>
+        <tr>
+          <td class="album-capa">
+            <img src="./../../assets/onAndOn.jpg" alt="">
+          </td>
+          <td>On & On (Feat. Daniel)</td>
+          <td>Cartoon</td>
+          <td>On & On</td>
+          <td class="opcoes-header">
+            <div class="opcoes-wrapper">
+              <div class="dropdown">
+                <button class="dropbtn"><span class="material-icons">more_vert</span></button>
+                <div class="dropdown-content">
+                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
+                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
                 </div>
-            </tr>
-            <tr class="cor-diferente">
-              <td class="album-capa">
-                <img src="./../../assets/django.png" alt="">
-              </td>
-              <td>Default</td>
-              <td>Django</td>
-              <td>Django</td>
-              <td class="opcoes-header">
-                <div class="opcoes-wrapper">
-                  <div class="dropdown">
-                    <button class="dropbtn"><span class="material-icons">more_vert</span></button>
-                    <div class="dropdown-content">
-                      <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                      <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
-                    </div>
-                  </div>
+              </div>
+            </div>
+        </tr>
+        <tr class="cor-diferente">
+          <td class="album-capa">
+            <img src="./../../assets/django.png" alt="">
+          </td>
+          <td>Default</td>
+          <td>Django</td>
+          <td>Django</td>
+          <td class="opcoes-header">
+            <div class="opcoes-wrapper">
+              <div class="dropdown">
+                <button class="dropbtn"><span class="material-icons">more_vert</span></button>
+                <div class="dropdown-content">
+                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
+                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
                 </div>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <ul>
-        <li><a routerLink="/historic" ><button>Mostrar mais</button></a></li>
-        </ul> 
-      
-        <br>
-        <br>
-        <br>
+              </div>
+            </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+      <li>
+          Mostrar Mais
+      </li>
+    </ul> 
 </div>

@@ -120,14 +120,22 @@
     z-index: 1;
   }
   
-  .dropdown-content a {
+  .dropdown-content p:first-child {
+    border-radius: 12px 0;
+  }
+
+  .dropdown-content p:last-child {
+    border-radius: 0 12px;
+  }
+
+  .dropdown-content p {
     color: white;
     text-decoration: none;
     display: block;
-    border-radius: 12px;
     background-color: rgba(38, 38, 40, 0.87);
     width: 205.99px;
     padding: 8px 0;
+    margin: 0;
   }
   
   .dropdown:hover .dropdown-content {

@@ -1,17 +1,16 @@
 <div class="admin-container-home">
     <div class = "header">
     <div class="circle">
-      <img src="./../../assets/rihannaPerfil.png" alt="Minha imagem">
+      <img src="{{artistaUrlFoto}}" alt="{{artistaNome}}">
     </div>
     <div class="container">
       <p style="font-size: 30px;">Rihanna</p>
-      <h2 class="informacoesArtista">Artista<br>Pop/R&B</h2>
+      <h2 class="informacoesArtista">Artista<br>{{artistaCategoria}}</h2>
     </div>
     </div>
 
     <p class="paragrafo" style="font-size: 30px; font-weight: bold;">Músicas</p>
     <div class="tableMusicas">
-      
       <table>
         <thead>
           <tr>
@@ -22,20 +21,20 @@
           </tr>
         </thead>
         <tbody>            
-          <tr class="cor-diferente">
+          <tr class="cor-diferente" *ngFor="let musica of musicas">
             <td class="album-capa">
-              <img src="./../../assets/anti.jpg" alt="">
+              <img src="{{musica.capaAlbum}}" alt="{{musica.titulo}}">
             </td>
-            <td>Kiss It Better </td>
-            <td>Rihanna</td>
-            <td>ANTi (Deluxe)</td>
+            <td>{{musica.titulo}}</td>
+            <td>{{musica.artistaNome}}</td>
+            <td>{{musica.tituloAlbum}}</td>
             <td class="opcoes-header">
               <div class="opcoes-wrapper">
                 <div class="dropdown">
                   <button class="dropbtn"><span class="material-icons">more_vert</span></button>
                   <div class="dropdown-content">
-                    <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                    <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
+                    <p (click)="cadastraMusicaPlaylist(musica.id)"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</p>
+                    <p (click)="irParaAlbum(musica.albumId)"><span class="material-icons">album</span>Ir para o álbum</p>
                   </div>
                 </div>
               </div>

@@ -9,9 +9,9 @@
   </div>
 </div>
 <ul>
-    <li><button (click)="editarAlbum(album.id)">Editar Informações</button></li>
-    <li><button (click)="cadastrarMusicas()">Cadastrar Musicas</button></li>
-    <li><button (click)="removerAlbum()">Excluir album</button></li>
+    <li [ngStyle]="{'display': isadminuser ? 'block' : 'none' }"><button (click)="editarAlbum(album.id)">Editar Informações</button></li>
+    <li [ngStyle]="{'display': isadminuser ? 'block' : 'none' }"><button (click)="cadastrarMusicas()">Cadastrar Musicas</button></li>
+    <li [ngStyle]="{'display': isadminuser ? 'block' : 'none' }"><button (click)="removerAlbum()">Excluir album</button></li>
 </ul>
 <br>
 <div class="tableGeral">

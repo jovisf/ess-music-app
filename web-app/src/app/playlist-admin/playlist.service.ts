@@ -30,7 +30,8 @@ export class PlaylistService {
       categoria: novaCategoria,
       url_foto_playlist: playlist.url_foto_playlist,
       usuario_dono: this.user,
-      musicas: [{}]
+      musicas: [],
+      seguidores: playlist.seguidores
     };
 
     return this.http.post(this.taURL + "/playlists", JSON.stringify(newPlaylists), { headers: this.headers, observe: "response" })
@@ -65,7 +66,8 @@ export class PlaylistService {
         url_foto_playlist: playlist.url_foto_playlist,
         categoria: playlist.categoria,
         usuario_dono: playlist.usuario_dono,
-        musicas: playlist.musicas.filter(m => m.id !== musicaId) // remove a música com o id correspondente da playlist
+        musicas: playlist.musicas.filter(m => m.id !== musicaId), // remove a música com o id correspondente da playlist
+        seguidores: playlist.seguidores
       }
 
       this.http.put(this.taURL + "/playlists/" + String(playlistId), novaPlaylist).subscribe(() => {

@@ -13,9 +13,7 @@
       <li>Seguir</li>
     <li>Compartilhar</li>
   </ul>
-
   <br>
-
   <div div class="pesquisa-playlist">
   <form action="#" method="get">
       <input type="text" name="q" placeholder="Pesquisar músicas...">
@@ -24,7 +22,6 @@
   </div>
   <br>
   <div class="tableGeral">
-    
     <table>
       <thead>
         <tr>
@@ -36,115 +33,20 @@
         </tr>
       </thead>
       <tbody>            
-        <tr class="cor-diferente">
+        <tr class="cor-diferente" *ngFor="let musica of musicas">
           <td class="album-capa">
-            <img src="./../../assets/hotlineBlingCapa.png" alt="">
+            <img src="{{musica.capaAlbum}}" alt="{{musica.titulo}}">
           </td>
-          <td>Hotline Bling</td>
-          <td>Drake</td>
-          <td>Hotline Bling</td>
+          <td>{{musica.titulo}}</td>
+          <td>{{musica.artistaNome}}</td>
+          <td>{{musica.tituloAlbum}}</td>
           <td class="opcoes-header">
             <div class="opcoes-wrapper">
               <div class="dropdown">
                 <button class="dropbtn"><span class="material-icons">more_vert</span></button>
                 <div class="dropdown-content">
-                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
-                </div>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="album-capa">
-            <img src="./../../assets/pharmacyCapa.png" alt="">
-          </td>
-          <td>Runaway (U & I)</td>
-          <td>Galantis</td>
-          <td>Pharmacy</td>
-          <td class="opcoes-header">
-            <div class="opcoes-wrapper">
-              <div class="dropdown">
-                <button class="dropbtn"><span class="material-icons">more_vert</span></button>
-                <div class="dropdown-content">
-                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
-                </div>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr class="cor-diferente">
-          <td class="album-capa">
-            <img src="./../../assets/dnceCapa.png" alt="">
-          </td>
-          <td>Cake By The Ocean</td>
-          <td>DNCE</td>
-          <td>DNCE</td>
-          <td class="opcoes-header">
-            <div class="opcoes-wrapper">
-              <div class="dropdown">
-                <button class="dropbtn"><span class="material-icons">more_vert</span></button>
-                <div class="dropdown-content">
-                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
-                </div>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="album-capa">
-            <img src="./../../assets/sugarCapa.jpg" alt="">
-          </td>
-          <td>Sugar (Feat. Francesco Yates)</td>
-          <td>Robin Schulz</td>
-          <td>Sugar</td>
-          <td class="opcoes-header">
-            <div class="opcoes-wrapper">
-              <div class="dropdown">
-                <button class="dropbtn"><span class="material-icons">more_vert</span></button>
-                <div class="dropdown-content">
-                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
-                </div>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr class="cor-diferente">
-          <td class="album-capa">
-            <img src="./../../assets/futureNostalgiaCapa.jpg" alt="">
-          </td>
-          <td>Physical</td>
-          <td>Dua Lipa</td>
-          <td>Future Nostalgia</td>
-          <td class="opcoes-header">
-            <div class="opcoes-wrapper">
-              <div class="dropdown">
-                <button class="dropbtn"><span class="material-icons">more_vert</span></button>
-                <div class="dropdown-content">
-                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
-                </div>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="album-capa">
-            <img src="./../../assets/highJesper.jpg" alt="">
-          </td>
-          <td>High</td>
-          <td>Jesper Jenset</td>
-          <td>High</td>
-          <td class="opcoes-header">
-            <div class="opcoes-wrapper">
-              <div class="dropdown">
-                <button class="dropbtn"><span class="material-icons">more_vert</span></button>
-                <div class="dropdown-content">
-                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
+                  <p (click)="cadastraMusicaPlaylist(musica.id)"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</p>
+                  <p (click)="irParaAlbum(musica.albumId)"><span class="material-icons">album</span>Ir para o álbum</p>
                 </div>
               </div>
             </div>

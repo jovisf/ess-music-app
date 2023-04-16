@@ -40,10 +40,9 @@
                 <div class="dropdown">
                   <button class="dropbtn"><span class="material-icons">more_vert</span></button>
                   <ul class="dropdown-content">
-                    <li href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</li>
-                    <li (click)="editarMusica(musica.id)"><span class="material-icons">edit_note</span>Editar informações</li>
-                    <li (click)="removerMusica(musica.id)"><span class="material-icons">highlight_off</span>Remover música</li>
-                    <li href="#"><span class="material-icons">album</span>Ir para o álbum</li>
+                    <p (click)="cadastraMusicaPlaylist(musica.id)"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</p>
+                    <p (click)="editarMusica(musica.id)"><span class="material-icons">edit_note</span>Editar informações</p>
+                    <p (click)="irParaAlbum(musica.albumId)"><span class="material-icons">album</span>Ir para o álbum</p>
                   </ul>
                 </div>
               </div>

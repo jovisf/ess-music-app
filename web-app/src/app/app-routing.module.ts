@@ -45,13 +45,13 @@ const routes: Routes = [
   { path: 'initial-page', component: InitialPageComponent, canActivate: [AuthGuard] },
   { path: 'userAdmin', component: UserAdminComponent, canActivate: [AuthGuard, RoleGuard] },
   { path: 'user', component: UserComponent, canActivate: [AuthGuard] },
-  { path: 'artista', component: ArtistaComponent, canActivate: [AuthGuard] },
+  { path: 'artista/:id', component: ArtistaComponent, canActivate: [AuthGuard] },
   { path: 'userEdit', component: UserEditComponent, canActivate: [AuthGuard] },
   { path: 'playlistUser', component: PlaylistUserComponent, canActivate: [AuthGuard] },
   { path: 'playlistCategoria', component: PlaylistCategoriaComponent, canActivate: [AuthGuard] },
   { path: 'playlistSeguida', component: PlaylistSeguidaComponent, canActivate: [AuthGuard] },
-  { path: 'visualizar-artistas-admin/:id/:nome/:genero_musical/:url_foto_artista/artistaAdmin', component: ArtistaAdminComponent, canActivate: [AuthGuard] },
-  { path: 'album', component: AlbumComponent, canActivate: [AuthGuard] },
+  { path: 'visualizar-artistas-admin/:id/:nome/:url_foto_artista/:categoria/artistaAdmin', component: ArtistaAdminComponent, canActivate: [AuthGuard] },
+  { path: 'album/:id', component: AlbumComponent, canActivate: [AuthGuard] },
   { path: 'albumAdmin/:id', component: AlbumAdminComponent, canActivate: [AuthGuard] },
   { path: 'albumAdmin/:albumId/cadastrar-musica', component: MusicasComponent, canActivate: [AuthGuard] },
   { path: 'cadastrar-artista', component: CadastraArtistaComponent, canActivate: [AuthGuard] },
@@ -68,7 +68,8 @@ const routes: Routes = [
   { path: 'resultadosPesquisa', component: ResultadosPesquisaComponent, canActivate: [AuthGuard] },
   { path: 'cadastrar-categoria', component: CriarCategoriaComponent},
   { path: 'adiciona-musica-playlist/:id', component: SelecionarPlaylistComponent, canActivate: [AuthGuard] },
-  { path: 'historic', component: HistoricComponent, canActivate:[AuthGuard]}
+  { path: 'historic', component: HistoricComponent, canActivate:[AuthGuard]},
+  { path: 'categoria-playlists', component: CategoriaPlaylistsComponent, canActivate:[AuthGuard]},
 ]
 
 @NgModule({

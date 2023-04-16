@@ -5,6 +5,7 @@ import { MusicaService } from '../musicas/musicas.service';
 import { Album } from '../album/album';
 import { Musica } from '../musicas/musica';
 import { CadastraArtistaService } from '../cadastra-artista/cadastra-artista.service';
+import { PlaylistService } from '../playlist-admin/playlist.service';
 
 @Component({
   selector: 'app-artista-admin',
@@ -12,14 +13,13 @@ import { CadastraArtistaService } from '../cadastra-artista/cadastra-artista.ser
   styleUrls: ['./artista-admin.component.css']
 })
 export class ArtistaAdminComponent implements OnInit {
-  constructor(private route: ActivatedRoute, private cadastraAlbum: CadastraAlbumService, private musicaService: MusicaService, private router: Router, private artistaService: CadastraArtistaService) {}
+  constructor(private route: ActivatedRoute, private cadastraAlbum: CadastraAlbumService, private musicaService: MusicaService, private router: Router, private artistaService: CadastraArtistaService, private playlistService: PlaylistService) {}
   artistaId: string = '';
   artistaNome: string = '';
   artistaCategoria: string = '';
   artistaUrlFoto: string = '';
   albums: Album[] =  [];
   musicas: Musica[] = [];
-  i: number = 0;
 
   ngOnInit(): void {
     this.artistaId = this.route.snapshot.params['id'];
@@ -48,10 +48,23 @@ export class ArtistaAdminComponent implements OnInit {
     this.musicaService.deleteMusicaById(String(musicaId))
     window.location.reload();
   }
+
+  irParaAlbum(albumId: Number) {
+    this.router.navigate(['albumAdmin', String(albumId)]);
+  }
+
+  cadastraMusicaPlaylist(musicaId: number) {
+    this.router.navigate(['adiciona-musica-playlist', musicaId]);
+  }
+
+  removerMusicaPlaylist(playlistId: number, musicaId: number){
+    this.playlistService.deletaMusicaPlaylist(playlistId, musicaId)
+    window.location.reload()
+  }
   
   deletarArtista() {
     this.artistaService.deleteArtistaById(this.artistaId).subscribe(() => {
-      this.router.navigate(['visualizar-artistas-admin']);
+      window.location.href = 'visualizar-artistas-admin'
     });
   }
 

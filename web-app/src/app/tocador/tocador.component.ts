@@ -16,7 +16,7 @@ export class TocadorComponent {
 
   user:any;
   musicaTitulo: string = '';
-  musicaId: number = 1; 
+  musicaId: number = 6;
   artistaTitulo: string = '';
   constructor(private http:HttpClient, private service: AuthService, private dialog: MatDialog, private musicaService: MusicaService) {
 
@@ -55,5 +55,5 @@ export class TocadorComponent {
     this.musicaService.getMusicaById(String(this.musicaId)).subscribe(res => {
       this.artistaTitulo = res.artistaNome;
     })
-};
+  };
 }

@@ -1,21 +1,19 @@
 <div class="admin-container-home">
-    <div class = "header">
-
-      <p class="paragrafo" style="font-size: 30px; font-weight: bold;">Playlists Pop</p>         
+    <div class = "header" *ngFor="let playlist of playlists">
+      <p class="paragrafo" style="font-size: 30px; font-weight: bold;">Playlists {{playlist.categoria}}</p>         
       <table class="tabela-playlists" id="tabelaPlaylists">
         <tr>
-          <td><img src="./../../assets/gagaNostalgia.png"><br>Nostalgia Pop<br><span class="categoria">Pop</span></td>
-          <td><img src="./../../assets/taylorPopHits.png"><br>Pop Hits<br><span class="categoria">Pop</span></td>
-          <td><img src="./../../assets/oliviaTeenPop.png"><br>Pop Teen<br><span class="categoria">Pop</span></td>
-          <td><img src="./../../assets/luisaPopBR.png"><br>Pop BR<br><span class="categoria">Pop</span></td>
+          <td><img src="{{playlist.url_foto_playlist}}" (click)="redirecionaTelaPlaylist(playlist.id)"><br>{{playlist.titulo}}<br><span class="categoria">{{playlist.categoria}}</span></td>
         </tr>
       </table>
+    </div>
+    <!-- <p class="paragrafo" style="font-size: 25px; font-weight: bold;"><br>Últimas álbuns acessados</p> -->
       <ul>
         <li>
             Mostrar todos
         </li>
       </ul>
-      <p class="paragrafo" style="font-size: 30px; font-weight: bold;">Playlists de Treino</p>
+      <p class="paragrafo" style="font-size: 30px; font-weight: bold;">Playlists</p>
       <table class="tabela-playlists" id="tabelaPlaylists">
         <tr>
           <td *ngFor="let playlist of playlists"><img src="{{playlist.url_foto_playlist}}" (click)="redirecionaTelaPlaylist(playlist.id)"><br>{{playlist.titulo}}<br><span class="categoria">{{playlist.categoria}}</span></td>

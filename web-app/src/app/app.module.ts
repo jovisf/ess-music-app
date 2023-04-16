@@ -98,7 +98,7 @@ import { CategoriaPlaylistsComponent } from './categoria-playlists/categoria-pla
     ResultadosPesquisaComponent,
     CriarCategoriaComponent,
     SelecionarPlaylistComponent,
-    CategoriaPlaylistsComponent
+    CategoriaPlaylistsComponent,
   ],
   imports: [
     BrowserModule,

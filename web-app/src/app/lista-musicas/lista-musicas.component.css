@@ -1,11 +1,159 @@
-input {
+.square {
+    width: 200px;
+    height: 200px;
+    border-radius: 0;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .square img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .container {
+    top: 150px;
+    margin-left: 10px;
+    text-transform: capitalize;
+  }
+  
+  .paragrafo {
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+  
+  .header {
     display: flex;
-    background-color: #262626;
-    border: none;
-    height: 3rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .tableGeral{
     width: 100%;
-    padding: 1rem 2rem;
-    border-radius: 15px;
-    color: #ffffff;
-    margin-bottom: 5rem;
-}
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  table {
+    width: 80%;
+    border-spacing: 0px;
+  }
+  tbody{
+    border-radius: 10px;
+  }
+  td {
+    text-transform: capitalize;
+    text-align: center;
+  }
+  
+  tr.cor-diferente {
+    background-color: rgba(76, 76, 79, 1);
+  }
+  
+  tbody{
+    background-color: rgba(38, 38, 40, 0.87);
+  }
+  
+  tr{
+    height: 1rem;
+  }
+  
+  td img{
+    height: 3rem;
+    width: 3rem;
+    
+  }
+  
+  td.album-capa {
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  td.album-capa img{
+    border-radius: 50%;
+  }
+  
+.informacoesAlbum{
+    color: rgba(195, 195, 195, 0.7);
+} 
+
+ul {
+    list-style: none;
+    padding: 8px 0;
+  }
+  
+  li {
+    display: inline-block;
+    width: 205.99px;
+    padding: 8px 0;
+    background-color: rgba(137, 7, 198, 1);
+    border-radius: 12px;
+    text-align: center;
+    margin-right: 20px;
+  }
+  
+  button {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: white;
+      cursor: pointer;
+    } 
+
+    .opcoes-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropbtn {
+      background-color: transparent;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      font-weight: Roboto, "Helvetica Neue", sans-serif;
+    }
+    
+    .dropdown-content {
+      display: none;
+      top: 0;
+      position: absolute;
+      z-index: 1;
+    }
+    
+    .dropdown-content li {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      display: block;
+      background-color: rgba(38, 38, 40, 0.87);
+      width: 205.99px;
+      border-radius: 0;
+      padding: 8px 0;
+    }
+    
+    .dropdown-content li:nth-child(1) {
+      border-radius: 12px 0;
+    }
+    
+    .dropdown-content li:last-child{
+      border-radius: 0 12px;
+    }
+    
+    .dropdown-content li:hover {
+      background-color: rgba(71, 71, 72, 0.87);;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    

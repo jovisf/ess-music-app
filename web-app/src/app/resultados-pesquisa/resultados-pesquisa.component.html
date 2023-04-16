@@ -29,8 +29,8 @@
               <div class="dropdown">
                 <button class="dropbtn"><span class="material-icons">more_vert</span></button>
                 <div class="dropdown-content">
-                  <a href="#"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</a>
-                  <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
+                  <p (click)="cadastraMusicaPlaylist(musica.id)"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</p>
+                  <p (click)="irParaAlbum(musica.albumId)"><span class="material-icons">album</span>Ir para o álbum</p>
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@
                 <div class="dropdown">
                   <button class="dropbtn"><span class="material-icons">more_vert</span></button>
                   <div class="dropdown-content">
-                    <a href="#"><span class="material-icons">album</span>Ir para o álbum</a>
+                    <p (click)="irParaAlbum(album.id)"><span class="material-icons">album</span>Ir para o álbum</p>
                   </div>
                 </div>
               </div>
@@ -92,7 +92,7 @@
                 <div class="dropdown">
                   <button class="dropbtn"><span class="material-icons">more_vert</span></button>
                   <div class="dropdown-content">
-                    <a href="#"><span class="material-icons">mic_external_on</span>Ir para o artista</a>
+                    <p (click)="irParaArtista(artista.id)"><span class="material-icons">album</span>Ir para o álbum</p>
                   </div>
                 </div>
               </div>

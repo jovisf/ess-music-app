@@ -1,8 +1,46 @@
-<table>
-  <tr>
-     <th>Nome</th>
-  </tr>
-  <tr *ngFor="let musica of musicas">
-     <td id="musica-{{musica.titulo}}">{{musica.titulo}}</td>
-  </tr>
-</table>
+<div class="admin-container-home">
+   <div class = "header">
+      <div class="container">
+         <h2 class="informacoesArtista">Lista das músicas</h2>
+      </div>
+   </div>
+   <div class="tableMusicas">
+     <table>
+       <thead>
+         <tr>
+           <th>#</th>
+           <th># Título</th>
+           <th># Artista</th>
+           <th># Álbum</th>
+         </tr>
+       </thead>
+       <tbody>
+         <ng-container *ngFor="let musica of musicas; let i = index">
+           <tr [ngClass]="{'cor-diferente': i % 2 == 0 }">
+             <td class="album-capa">
+               <img src="{{musica.capaAlbum}}" alt="">
+             </td>
+             <td>
+               <p>{{musica.titulo}}</p>
+             </td>
+             <td>{{musica.artistaNome}}</td>
+             <td>{{musica.tituloAlbum}}</td>
+             <td class="opcoes-header">
+               <div class="opcoes-wrapper">
+                 <div class="dropdown">
+                   <button class="dropbtn"><span class="material-icons">more_vert</span></button>
+                   <ul class="dropdown-content">
+                     <li (click)="cadastraMusicaPlaylist(musica.id)"><span class="material-icons">playlist_add</span>Adicionar a uma playlist</li>
+                     <li (click)="editarMusica(musica.id)"><span class="material-icons">edit_note</span>Editar informações</li>
+                     <li (click)="removerMusica(musica.id)"><span class="material-icons">highlight_off</span>Remover música</li>
+                     <li (click)="irParaAlbum(musica.albumId)"><span class="material-icons">album</span>Ir para o álbum</li>
+                   </ul>
+                 </div>
+               </div>
+             </td>
+           </tr>
+         </ng-container>          
+       </tbody>        
+     </table>
+   </div>
+</div>

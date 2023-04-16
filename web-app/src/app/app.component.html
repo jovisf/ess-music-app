@@ -4,7 +4,7 @@
             <ul>
                 <li><a routerLink="/initial-page">Home</a></li>
                 <li [ngClass]="{'hide-item': !isuser}"><a routerLink="/user">Perfil</a></li>
-                <li [ngClass]="{'hide-item': !isuser}"><a *ngIf="isuser" routerLink="/categoriaPlaylists">Playlists</a></li>
+                <li [ngClass]="{'hide-item': !isuser}"><a *ngIf="isuser" routerLink="/categoria-playlists">Playlists</a></li>
                 <li [ngClass]="{'hide-item': !isuser}"><a *ngIf="isuser" routerLink="/bibliotecaUsuario">Biblioteca</a></li>
                 <li [ngClass]="{'hide-item': !isuser}"><a *ngIf="isuser" routerLink="/historic">Histórico</a></li>
                 <li [ngClass]="{'hide-item': !isadminuser}"><a *ngIf="isadminuser" routerLink="/playlistsCategoriaAdmin">Playlists</a></li>

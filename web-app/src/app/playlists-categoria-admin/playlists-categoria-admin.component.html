@@ -18,7 +18,7 @@
             Mostrar todos
         </li>
       </ul>
-      <p class="paragrafo" style="font-size: 30px; font-weight: bold;">Playlists de Treino</p>
+      <p class="paragrafo" style="font-size: 30px; font-weight: bold;">Playlists</p>
       <table class="tabela-playlists" id="tabelaPlaylists">
         <tr>
           <td *ngFor="let playlist of playlists"><img src="{{playlist.url_foto_playlist}}" (click)="redirecionaTelaPlaylist(playlist.id)"><br>{{playlist.titulo}}<br><span class="categoria">{{playlist.categoria}}</span></td>
